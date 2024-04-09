@@ -5,7 +5,7 @@
 const userInputString = prompt(
   "Please enter some integers separated by commas.",
   "1,2,3,4,5"
-);
+)
 
 // Split the string of numbers into an array of strings.
 const stringArray = userInputString.split(",");
@@ -38,15 +38,24 @@ console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
  */
 function getLength(numbers) {
   // TODO
+  let length = numbers.length;
+  return length
 }
 
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the sum of the numbers
  */
+
 function getSum(numbers) {
   // TODO
+  let sum = 0
+  for (let i = 0; i < numbers.length; i++){
+    sum += numbers[i];
+  }
+  return sum
 }
+
 
 /**
  * @param {number[]} numbers an array of integers
@@ -54,14 +63,24 @@ function getSum(numbers) {
  */
 function getMean(numbers) {
   // TODO
+  let sum = getSum(numbers);
+  let mean = sum / numbers.length;
+  return mean;
 }
-
+console.log(numbers(0))
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
   // TODO
+  let min = numbers[0];
+  for (i = 1; i < numbers.length; i++){
+    if (min > numbers(i)) {
+      min = numbers[i];
+    }
+  }
+  return min;
 }
 
 /**
@@ -70,6 +89,12 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
+  let max = numbers[0];
+  for (i = 1; i < numbers.length; i++)  {
+    if (numbers[i] > max){
+      max = numbers[i];
+    }
+  }
 }
 
 /**
@@ -78,6 +103,7 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
+  console.log(min + "-" + max)
 }
 
 /**
