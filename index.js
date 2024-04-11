@@ -76,7 +76,7 @@ function getMin(numbers) {
   // TODO
   let min = numbers[0];
   for (i = 1; i < numbers.length; i++){
-    if (min > numbers(i)) {
+    if (min > numbers[i]) {
       min = numbers[i];
     }
   }
@@ -90,11 +90,12 @@ function getMin(numbers) {
 function getMax(numbers) {
   // TODO
   let max = numbers[0];
-  for (i = 1; i < numbers.length; i++)  {
+  for (i = 1; i < numbers.length; i++){
     if (numbers[i] > max){
       max = numbers[i];
     }
   }
+  return max;
 }
 
 /**
@@ -103,7 +104,10 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
-  console.log(min + "-" + max)
+  min = getMin(numbers)
+  max = getMax(numbers)
+  range = min + "-" + max;
+  return range;
 }
 
 /**
